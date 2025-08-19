@@ -1,0 +1,17 @@
+body{
+    background-color: gray;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+}
+
+#changeBtn{
+    padding: 0.4rem 1rem;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+}

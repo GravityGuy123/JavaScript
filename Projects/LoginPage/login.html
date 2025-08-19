@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logi Page</title>
+    <style>
+      * {
+        margin: 0%;
+        padding: 0%;
+      }
+
+      body {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        width: 100vw;
+      }
+
+      .content {
+        /* background-image: linear-gradient(); */
+        /* background: linear-gradient(to right, blue, green); */
+        /* background: linear-gradient(to bottom, rgb(209, 245, 215), rgb(69, 148, 69)); */
+        margin: auto;
+        margin-top: 80px;
+        width: 90vw;
+        height: auto;
+        text-align: center;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        align-content: center;
+        border: 2px solid green;
+        border-radius: 1rem;
+        box-shadow: 3px 5px 8px;
+      }
+
+      #myform {
+        /* margin: auto; */
+        width: 70vw;
+        display: flex;
+        flex-flow: column;
+        text-align: left;
+      }
+
+      .log-message {
+        margin: auto;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        background-color: green;
+        color: white;
+        padding: 0.8rem 1.2rem;
+        text-align: center;
+        align-content: center;
+        border-radius: 0.7rem;
+      }
+
+      input[type="text"], input[type="password"] {
+        display: block;
+        border: 2px solid green;
+        background-color: #f0fff0;
+        color: #333;
+        padding: 1rem 1rem;
+        border-radius: 6px;
+      }
+
+      .password-input{
+        margin-bottom: 1rem;
+      }
+      
+      .mailorphone-input {
+        margin-bottom: 1rem;
+      }
+
+      .remember-forgot-div{
+        display: flex;
+      }
+
+      .remember-checkbox{
+        display: inline;
+        margin-left: 1rem;
+      }
+
+      .forgot{
+        margin-left: auto;
+        margin-right: 1rem;
+      }
+
+      .btn {
+        color: white;
+        padding: 0.7rem 1rem;
+        border: none;
+        border-radius: 0.7rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-decoration: none;
+        text-align: center;
+      }
+
+      .login-btn{
+        background-color: green;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .no-account{
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .create-account-btn{
+        background-color: white;
+        color: green;
+        border: 2.2px solid green;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <form action="" class="myform" id="myform">
+        <h2 class="log-message">Login Page</h2>
+        <input class="input mailorphone-input" type="text" name="emailorPhone" id="emailorPhone-id" placeholder="Enter your email or phone number"/>
+        <input class="input password-input" type="password" name="password"  id="password-id" placeholder="Enter your password"/>
+        <div class="remember-forgot-div">
+            <label class="remember-label" for="remember-me">
+              <input class="remember-checkbox" type="checkbox" name="remember-me" id="remember-me" /> Remember Me </label>
+              <span class="forgot">Forgot Password</span>
+        </div>
+        <a href="index.html" type="submit" class="btn login-btn" id="login-btn">Login</a>
+        <p class="no-account">Don't have an account</p>
+        <a href="" class="btn create-account-btn" id="create-account-btn">Create Account</a>
+        
+      </form>
+    </div>
+
+    <script>
+      const loginBtn = document.getElementById("login-btn");
+      const emailOrPhoneInput = document.getElementById("emailorPhone-id");
+      loginBtn.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        const emailOrPhone = emailOrPhoneInput.value.trim();
+        const password = document.getElementById("password-id").value.trim();
+
+        if (emailOrPhone === "" || password === "") {
+          alert("Please fill in all fields.");
+          return;
+        }
+
+        // Here you can add your login logic, e.g., sending data to a server
+        console.log("Email or Phone:", emailOrPhone);
+        console.log("Password:", password);
+      });
+    </script>
+  </body>
+</html>

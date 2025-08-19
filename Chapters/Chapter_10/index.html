@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 10</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        margin: 20px 0;
+        width: 60%;
+      }
+      td,
+      th {
+        border: 1px solid #333;
+        padding: 10px;
+        text-align: center;
+      }
+      .box {
+        background-color: #f0f0f0;
+        font-weight: bold;
+      }
+      #message {
+        margin-top: 20px;
+        font-size: 18px;
+        color: darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">What's cooking</div>
+    <p>Red</p>
+    <p>Blue</p>
+    <p>Yellow</p>
+    <aside class="my-class">Hi</aside>
+    <div class="my-class">Hello</div>
+    <section class="my-class">Xup</section>
+
+    <div class="select">First</div>
+    <div class="select">Second</div>
+    <div class="select">Third</div>
+    <div class="select">Fourth</div>
+    <script src="script.js"></script>
+
+    <div class="select-all">Top</div>
+    <div class="select-all">Right</div>
+    <div class="select-all">Bottom</div>
+    <div class="select-all">Left</div>
+
+    <button class="button btn-1" onclick="message(this)">Click 1</button>
+    <button class="button btn-2" onclick="message(this)">Click 2</button>
+
+    <h2>Click a row to see its attributes</h2>
+    <div id="output"></div>
+    <div id="message"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

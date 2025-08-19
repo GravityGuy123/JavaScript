@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice 10 1st</title>
+    <style>
+      h4 {
+        list-style-type: none;
+      }
+
+      .event-one {
+        background-color: purple;
+        color: white;
+        width: 100px;
+        height: 20px;
+        padding: 0.4rem 0.2rem;
+        text-align: center;
+        cursor: pointer;
+        /* visibility: hidden; */
+      }
+
+      .button {
+        padding: 0.4rem 1rem;
+        border: none;
+        background-color: rgb(119, 24, 105);
+        color: white;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      div {
+        height: 30px;
+        width: 30px;
+        background-color: white;
+      }
+
+      .facebook {
+        background-color: darkblue;
+      }
+
+      .youtube {
+        background-color: red;
+      }
+
+      .whatsapp {
+        background-color: green;
+      }
+
+      .hover-btn {
+        background-color: rgb(65, 175, 160);
+      }
+
+      .ball {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+
+      .hide {
+        visibility: hidden;
+      }
+
+      .red {
+        background-color: red;
+        color: white;
+      }
+
+      .square {
+        margin: 10px 10px 0 0;
+        background-color: green;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+      }
+
+      table {
+        border-collapse: collapse;
+        margin: 20px 0;
+        width: 60%;
+      }
+      td,
+      th {
+        border: 1px solid #333;
+        padding: 10px;
+        text-align: center;
+      }
+      .box {
+        background-color: #f0f0f0;
+        font-weight: bold;
+      }
+      #message {
+        margin-top: 20px;
+        font-size: 18px;
+        color: darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 class="tree">Programs</h3>
+    <ul class="list ul-List" id="list">
+      <li class="one">HTML</li>
+      <li class="one">CSS</li>
+      <li class="one">JavaScript</li>
+      <li class="one">React</li>
+      <li class="one">Python</li>
+    </ul>
+
+    <!-- <button class="shape" onclick="setAttr()">Shape</button> -->
+    
+    <!-- <div class="square">
+      <button class="change" onclick="changeShape()" onmouseover="change()">Change</button>
+    </div> -->
+    
+    <!-- <div id="red"></div>
+    <div id="orange"></div>
+    <div id="yellow"></div>
+    <div id="green"></div>
+    <div id="blue"></div>
+    <div id="indigo"></div>
+    <div id="violet"></div>
+    <button onclick="rainbowify()">Make me a rainbow</button> -->
+
+
+    <h2>Click a row to see its attributes</h2>
+    <div id="output"></div>
+    <div id="message"></div>
+    
+    
+    <!-- <h3 class="tree thanks">Thank you for visiting</h3>
+
+      <div class="example">Element</div>
+      <aside class="my-class">Hi</aside>
+      <div class="my-class">Hello</div>
+      <section class="my-class">Xup</section> -->
+    <!-- <ul type="square">
+        <li class="two">Oi</li>
+        <li class="two">Hola</li>
+        <li class="two">Kumapta</li>
+        <li class="two">Adios</li>
+        <li class="two">Amingos</li>
+      </ul> -->
+    <!-- <ol type="a">
+      <li class="three">America</li>
+      <li class="three">Australia</li>
+      <li class="three">Brazil</li>
+      <li class="three">China</li>
+      <li class="three">France</li>
+      <li class="three">Mexico</li>
+    </ol> -->
+    <!-- <button type="button" class="button" onclick="this.style.backgroundColor='orange'">Submit</button>
+    <button class="button" onmouseover="this.style.backgroundColor= 'red', console.log('Hovered')">Create</button>
+    <button class="button" onclick="stop(), this.style.backgroundColor = 'purple'">Stop</button>
+    <button type="button" class="button facebook" onclick="console.log('Welcome to Facebook')">Facebook</button>
+    <button type="button" class="button whatsapp" onclick="console.log('Welcome to WhatsApp')">WhatsApp</button>
+    <button type="button" class="button youtube" onclick="console.log('Welcome to Youtube')">Youtube</button>
+    <button class="button hover-btn" onmouseover="this.style.backgroundColor = 'orange'">Hover</button> -->
+    <!-- <div class="event-one" id="event-one">Click me</div>
+
+    <button class="button login-btn" onclick="this.style.backgroundColor = 'red'">Login</button>
+    <button class="button signup-btn" onmouseenter="console.log('Welcome back'), this.style.backgroundColor = 'blue'" onmouseleave="this.style.backgroundColor = 'orange'">Signup</button>
+    <button class="button" onclick="reveal(this)">Click here!</button>
+    <button class="button" onclick="buzzOff(this)">Hello</button> -->
+
+
+    <!-- <button class="button btn-1" onclick="message(this)">Click 1</button>
+    <button class="button btn-2" onclick="message(this)">Click 2</button> -->
+
+    <!-- <button class="button button-1" onclick="show(this)">Button 1</button>
+    <button class="button button-2" onclick="show(this)">Button 2</button> -->
+
+    <!-- <button class="button change" id="change">Change</button> -->
+
+
+    <!-- <button class="button display" onclick="display(this)">Display 1</button>
+    <button class="button display" onclick="display(this)">Display 2</button>
+
+    <button class="button invisible" id="invisible">Disappeared</button> -->
+
+
+    <!-- <div id="orange"></div>
+    <div id="yellow"></div>
+    <div id="green"></div>
+    <div id="blue"></div>
+    <div id="indigo"></div>
+    <div id="violet"></div>
+    <button onclick="rainbowify()">Make me a rainbow</button> -->
+
+    <!-- <button class="button send" id="send" onmouseenter="disappear()" onmouseleave="appear()">Send</button>
+
+    <button class="button make" onmouseenter="add()" onmouseleave="remove()">Make</button> -->
+    <script src="script.js"></script>
+  </body>
+</html>

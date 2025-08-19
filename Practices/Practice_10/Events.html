@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="Events.css">
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* #main{
+            width: 150px;
+            height: 150px;
+            background-color: green;
+        } */
+
+        #registration-form{
+            position: relative;
+            top: 2rem;
+            background-color: rgba(128, 0, 128, 0.2);
+            width: 80vw;
+            /* height: 20rem; */
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            align-content: center;
+            justify-items: center;
+            border-radius: 0.5rem;
+        }
+
+        #create{
+            background-color: rgba(255, 255, 255, 0.4);
+            color: purple;
+            width: 15rem;
+            height: 2rem;
+            text-transform: uppercase;
+            text-align: center;
+            align-content: center;
+            border-radius: 0.5rem;
+        }
+
+        .form-group input{
+            margin-bottom: 1rem;
+            display: block;
+            width: 20rem;
+            height: 3rem;
+            border: none;
+            border-radius: 0.5rem;
+            padding-left: 1rem;
+        }
+
+        #form-group input:hover{
+            border: 2px solid purple;
+        }
+
+        #submit-button{
+            background-color: purple;
+            color: white;
+            border: none;
+            margin-top: 0.5rem;
+            width: 10rem;
+            align-content: center;
+            align-items: center;
+            justify-items: center;
+            width: 21rem;
+            height: 3rem;
+            border-radius: 0.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        #submit-button:hover{
+            background-color: rgb(192, 83, 192);
+        }
+    </style>
+</head>
+<body>
+    <main id="main" onclick="alert(Math.floor(Math.random() * 100))">
+
+    </main>
+    <form id="registration-form" action="http: //localhost:5209/" method="post">
+        <h2 id="create">Create Account</h2>
+        <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" name="full-name" id="fullName" title="full-name" placeholder="Enter your Full Name" required>
+        </div>
+        <div class="form-group">
+            <label for="fullName">Phone Number</label>
+            <input type="text" name="full-name" id="fullName" title="full-name" placeholder="Enter your Phone Number" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" title="email" placeholder="Enter your Email" required>
+        </div>
+
+        <!-- <div class="form-group">
+            <label for="password">Image</label>
+            <input type="image" name="image" id="image" title="image" placeholder="Enter your Password" required>
+        </div> -->
+
+        <div class="form-group">
+            <label for="password-1">Password</label>
+            <input type="password" name="password" id="password-1" title="password" placeholder="Enter your Password" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password-2">Re-enter Password</label>
+            <input type="password" name="password" id="password-2" title="password" placeholder="Re-enter your Password" required>
+        </div>
+        <button id="submit-button" type="submit">Create</button>
+        </p>
+    </form>
+    <script src="Events.js"></script>
+</body>
+</html>

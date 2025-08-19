@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="">
+      function sumNumbersUpToTen() {
+        let total = 0;
+
+        for (let i = 0; i <= 10; i++) {
+          console.log(`${total} + ${i} = ${total + i}`);
+          total += i;
+        }
+
+        console.log("Final Total Sum:", total);
+      }
+
+      // Call the function
+      sumNumbersUpToTen();
+    </script>
+  </body>
+</html>

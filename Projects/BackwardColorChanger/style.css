@@ -1,0 +1,17 @@
+body{
+    height: 97vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#change{
+    background-color: darkblue;
+    color: white;
+    padding: 0.4rem 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: 3px solid white;
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px 35px;
+}
