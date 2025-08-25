@@ -324,9 +324,6 @@ function addRandomNumber() {
 //   }
 // }
 
-
-
-
 // const names = ["GravityGuy", "Sonic", "DevMaster", "CodeLord", "BadAss Hacker"];
 // let index = 0;
 // const changeName = document.getElementById("changeName");
@@ -340,38 +337,194 @@ function addRandomNumber() {
 //   }
 // }
 
+// const homeStuffs = document.getElementById("object");
+// const objects = ["Phone", "Mouse", "Charger", "MIFI", "Phone Stand", "Extension", "Flashlight"];
+// let position = 0;
+
+// function changeStuff() {
+//   homeStuffs.textContent = objects[position];
+//   position++
+
+//   if (position >= objects.length) {
+//     position = 0;
+//   }
+// }
+
+// const colorElement = document.querySelector(".color");
+// const colors = ['red', 'blue', 'green', 'orange', 'purple', 'orange', 'darkred', 'darkblue', 'pink', 'magenta', 'yellowgreen', 'gray', 'cyan'];
+// let index = 0;
+
+// function changeColor(){
+//   colorElement.textContent = colors[index];
+//   colorElement.style.backgroundColor = colors[index];
+//   index % 2 === 0
+//     ? (colorElement.style.fontWeight = "bold")
+//     : (colorElement.style.fontWeight = "normal");
+//   index++
+
+//   if (index >= colors.length) {
+//     index = 0;
+//   }
+// }
+
+// const content = document.getElementById("content");
+// const firstDisplay = document.getElementById("display1");
+// const secondDisplay = document.getElementById("display2");
+// const randomBtn = document.querySelector("random");
+
+// function changeNumber() {
+//   let randomNum = Math.floor(Math.random() * (100 - 1 + 1) + 1);
+//   firstDisplay.textContent = `Age: ${randomNum}`;
+//   // let message;
+
+//   // if (randomNum > 0 && randomNum <= 10) {
+//   //   message = `Too young, join the children section`;
+//   // } else if (randomNum > 10 && randomNum < 18) {
+//   //   message = `Quite young, join the teens Section`;
+//   // } else if (randomNum >= 18 && randomNum < 30) {
+//   //   message = `Young, join the Young Adult Section`;
+//   // } else if (randomNum >= 30 && randomNum < 60) {
+//   //   message = `Old, join the Oldie Section`;
+//   // } else {
+//   //   message = `Too old, go and rest`;
+//   // }
+
+//   // secondDisplay.textContent = message;
+//   secondDisplay.textContent = `I am ${randomNum} years old.`;
+// }
+
+// print("Hello, welcome to the JavaScript practice page!")
+
+// const facebook = document.getElementById("facebook");
+// console.log(facebook)
+// // facebook.classList.add("face");
+// // facebook.classList.add("book")
+
+// function toggleClass() {
+//   facebook.classList.toggle("green")
+// }
+
+// const changeShape = document.querySelector(".change-shape")
+// console.log(changeShape)
+
+// function shapeFunc() {
+//   changeShape.classList.toggle("circle")
+// }
+
+// const firstView = document.querySelector(".view1");
+// const secondView = document.querySelector(".view2");
+// const changeBtn = document.getElementById("change-btn");
+
+// const colors = ["red", "blue", "green", "orange", "pink", "black", "magenta", "darkblue", ];
+// let firstViewIndex = 0;
+// let secondViewIndex = colors.length -1;
+
+// function changeFunc() {
+//   if (firstViewIndex >= colors.length || secondViewIndex < 0) {
+//     firstViewIndex = 0;
+//     secondViewIndex = colors.length -1;
+//   }
+
+//   firstView.style.backgroundColor = colors[firstViewIndex];
+//   firstView.textContent = colors[firstViewIndex].toUpperCase();
+//   secondView.style.backgroundColor = colors[secondViewIndex];
+//   secondView.textContent = colors[secondViewIndex].toUpperCase();
+
+//   firstViewIndex ++;
+//   secondViewIndex --
+// }
+
+// function toggleFunc() {
+//   toggleBtn.classList.toggle("red");
+// }
+
+// // Using AddEventListeners
+// const toggleBtn = document.querySelector(".toggle-btn");
+// console.log(toggleBtn);
+
+// const colors = ["gold", "red", "blue", "purple", "black", "green"];
+// let index = 0;
+
+// toggleBtn.addEventListener("click", changeColor);
+
+// function changeColor() {
+//   toggleBtn.style.backgroundColor = colors[index];
+
+//   index++;
+
+//   if (index >= colors.length) {
+//     index = 0;
+//   }
+// }
+
+// 10.9
+// Try an alternative way to implement similar logic to Practice exercise 10.7. Use the following HTML code as a template for this exercise, and add the contents of the script element:
+
+// <!doctype html>
+// <html>
+// <head>
+// <title>JS Tester</title>
+// </head>
+// <body></body>
+// <div>
+// <button>Button 1</button>
+// <button>Button 2</button>
+// <button>Button 3</button>
+// </div>
+// <script>
+// </script>
+// </body>
+// </html>
+
+// Take the following steps:
+// 1. Select all the page buttons into a JavaScript object.
+// 2. Loop through each button, and create a function within the button scope called output.
+// 3. Within the output() function, add a console.log() method that outputs the current object's textContent . You can reference the current parent object using the this keyword.
+// 4. As you loop through the buttons attach an event listener that when clicked invokes the output() function.
 
 
 
-const homeStuffs = document.getElementById("object");
-const objects = ["Phone", "Mouse", "Charger", "MIFI", "Phone Stand", "Extension", "Flashlight"];
-let position = 0;
+// // Step 1: Select all buttons
+// const buttons = document.querySelectorAll(".click-btn");
 
-function changeStuff() {
-  homeStuffs.textContent = objects[position];
-  position++
+// // Step 2: Loop through each button
+// buttons.forEach(function (btn) {
 
-  if (position >= objects.length) {
-    position = 0;
-  }
-}
+//   // Step 3: Define output function inside the loop
+//   function output() {
+//     console.log("You clicked: " + this.textContent);
+//   }
+
+//   // Step 4: Attach event listener
+//   btn.addEventListener("click", output);
+// });
+
+// toggleBtn.addEventListener("click", changeColor);
+
+const eventBtn = document.querySelector(".event-btn");
+// eventBtn.style.color = 'yellow'
+eventBtn.addEventListener("click", changeText);
+
+function changeText() {
+  eventBtn.textContent = "Event"
+};
 
 
+const form = document.getElementById("registration-form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault(); // prevents the form from performing that default action, in this case is preventing the form from submitting direct.
 
-
-const colorElement = document.querySelector(".color");
-const colors = ['red', 'blue', 'green', 'orange', 'purple', 'orange', 'darkred', 'darkblue', 'pink', 'magenta', 'yellowgreen', 'gray', 'cyan'];
-let index = 0;
-
-function changeColor(){
-  colorElement.textContent = colors[index];
-  colorElement.style.backgroundColor = colors[index];
-  index % 2 === 0
-    ? (colorElement.style.fontWeight = "bold")
-    : (colorElement.style.fontWeight = "normal");
-  index++
-
-  if (index >= colors.length) {
-    index = 0;
-  }
-}
+  const formData = {
+    fullName: document.getElementById("fullName").value,
+    email: document.getElementById("email").value,
+    password1: document.getElementById("password-1").value,
+    password2: document.getElementById("password-2").value,
+  };
+  console.log("form submitted:", formData);
+  alert("Registration successful!");
+  form.reset();
+  // if (password1 = password2) {
+  // } else {
+  //     alert("Passwords does not match")
+  // }
+});

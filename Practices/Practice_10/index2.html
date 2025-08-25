@@ -1,31 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Practice 10 2nd</title>
     <style>
-        .button{
-            background-color: darkblue;
-            color: white;
-            padding: 0.4rem 1rem;
-            border: none;
-        }
+      /* body{
+            margin: auto;
+            margin-top: 2rem;
+            width: 80vw;
+            display: flex;
+            flex-flow: column;
+        } */
+      .button {
+        margin: 0.2rem 0.2rem 0.2rem 0;
+        background-color: darkblue;
+        color: white;
+        padding: 0.4rem 1rem;
+        border: none;
+        border-radius: 0.5rem;
+        font-size: 1.3rem;
+      }
 
-        #object{
-            background-color: rgb(139, 125, 0);
-        }
+      #object {
+        background-color: rgb(139, 125, 0);
+      }
+
+      #content {
+        margin: auto;
+        width: 90vw;
+        height: 95vh;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 1 1 auto;
+        text-align: center;
+      }
+
+      .display-content {
+        padding: 7rem 0;
+        background-color: blue;
+        color: white;
+        /* text-shadow: 3px 3px 15px; */
+        width: 90%;
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+      }
+
+      .green {
+        background-color: green;
+      }
+
+      .red {
+        background-color: red;
+      }
+
+      .shape {
+        background-color: rgb(110, 14, 134);
+        color: white;
+        padding: 2rem 2rem;
+        border: none;
+      }
+
+      .circle {
+        border-radius: 50%;
+      }
+
+      .container {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .display {
+        width: 80vw;
+        background-color: purple;
+        color: white;
+        padding: 5rem;
+        display: flex;
+        /* text-shadow: 3px 3px 15px; */
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn-parent {
+        margin: auto;
+        width: 70vw;
+        display: flex;
+        flex-flow: column;
+        flex: 1 1;
+      }
+
+      #change-btn {
+        margin-left: 2rem;
+      }
     </style>
-</head>
-<body>
-    <button class="button" id="add-num" onclick="addRandomNumber()">Add a number</button>
+  </head>
+  <body>
+    <!-- <button class="button" id="add-num" onclick="addRandomNumber()">Add a number</button>
     <p></p>
     <button class="button" id="changeName" onclick="nextName()">Change Name</button>
 
     <p></p>
     <button class="button" id="object" onclick="changeStuff()">Home Stuffs</button>
 
-    <button class="button color" onclick="changeColor()">Color</button>
+    <button class="button color" onclick="changeColor()">Color</button> -->
+
+    <!-- <div class="content" id="content">
+        <section class="display-content">
+            <div class="display1" id="display1">Am your random age value</div>
+            <p class="display2" id="display2">Hi am the output message</p>
+        </section>
+        <button class="button random" onclick="changeNumber()">Number</button>
+    </div> -->
+
+    <!-- <button class="button" onclick="alert('You clicked me')">CLick</button> -->
+    <!-- <button class="button" id="facebook" onclick="toggleClass()">Toggle me</button> -->
+    <!-- <button class="shape change-shape" onclick="shapeFunc()">Change Shape</button> -->
+
+    <!-- <div class="container">
+      <span class="display view1">Clockwise</span>
+      <span class="display view2">Ant-Clockwise</span>
+    </div>
+    <div class="btn-parent">
+        <button class="button" id="change-btn" onclick="changeFunc()">Change</button>
+    </div>
+    </div> -->
+    <!-- <button class="button toggle-btn">Toggle</button> -->
+
+    <!-- <div>
+      <button class="click-btn">Button 1</button>
+      <button class="click-btn">Button 2</button>
+      <button class="click-btn">Button 3</button>
+    </div> -->
+
+    <button class="button event-btn">Click me</button>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

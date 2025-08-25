@@ -179,3 +179,56 @@ function getData(element) {
 
 // Invoke build function
 build();
+
+// NB: When you include a this keyword within the function called in an event e.g onclick="message(this)", the function gets the current element object data that triggered the event. This allows you to access properties of that element directly within the function, such as its attributes or styles. but when you use getData(this), it passes the current element object to the getData function, allowing you to manipulate or retrieve data from that specific element.
+
+// When you don't include a this keyword within the function called in an event e.g onclick="message()", the function will not receive any specific element data. Instead, it will refer to the global context or the window object, which means you won't have access to the properties of the element that triggered the event. This can lead to errors or unexpected behavior if you try to access properties that don't exist on the global object.
+
+
+// 10.9
+// Try an alternative way to implement similar logic to Practice exercise 10.7. Use the following HTML code as a template for this exercise, and add the contents of the script element:
+
+// <!doctype html>
+// <html>
+// <head>
+// <title>JS Tester</title>
+// </head>
+// <body></body>
+// <div>
+// <button>Button 1</button>
+// <button>Button 2</button>
+// <button>Button 3</button>
+// </div>
+// <script>
+// </script>
+// </body>
+// </html>
+
+// Take the following steps:
+// 1. Select all the page buttons into a JavaScript object.
+// 2. Loop through each button, and create a function within the button scope called output.
+// 3. Within the output() function, add a console.log() method that outputs the current object's textContent . You can reference the current parent object using the this keyword.
+// 4. As you loop through the buttons attach an event listener that when clicked invokes the output() function.
+
+
+
+// // Step 1: Select all buttons
+// const buttons = document.querySelectorAll(".button-click");
+
+// // Step 2: Loop through each button
+// buttons.forEach(function (btn) {
+
+//   // Step 3: Define output function inside the loop
+//   function output() {
+//     console.log("You clicked: " + this.textContent);
+//   }
+
+//   // Step 4: Attach event listener
+//   btn.addEventListener("click", output);
+// });
+
+
+let el = document.createElement("p");
+el.innerText = Math.floor(Math.random() * 100);
+document.body.appendChild(el);
+console.log(el)

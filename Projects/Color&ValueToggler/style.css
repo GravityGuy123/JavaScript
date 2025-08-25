@@ -1,0 +1,42 @@
+body {
+  width: 80vw;
+  display: flex;
+  flex-flow: column;
+}
+
+.container {
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  margin: 0.2rem 0.2rem 0.2rem 0;
+  background-color: darkblue;
+  color: white;
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.display {
+  width: 80vw;
+  background-color: purple;
+  color: white;
+  padding: 5rem;
+  display: flex;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.btn-parent {
+  margin: auto;
+  width: 70vw;
+  display: flex;
+  flex-flow: column;
+  flex: 1 1;
+}
+
+#change-btn {
+  margin-left: 2rem;
+}
