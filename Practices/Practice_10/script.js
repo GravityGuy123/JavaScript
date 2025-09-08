@@ -501,30 +501,127 @@ function addRandomNumber() {
 
 // toggleBtn.addEventListener("click", changeColor);
 
-const eventBtn = document.querySelector(".event-btn");
-// eventBtn.style.color = 'yellow'
-eventBtn.addEventListener("click", changeText);
+// const eventBtn = document.querySelector(".event-btn");
+// eventBtn.addEventListener("click", changeText);
 
-function changeText() {
-  eventBtn.textContent = "Event"
-};
+// function changeText() {
+//   eventBtn.textContent = "Event"
+// };
 
 
-const form = document.getElementById("registration-form");
-form.addEventListener("submit", (e) => {
-  e.preventDefault(); // prevents the form from performing that default action, in this case is preventing the form from submitting direct.
+// const form = document.getElementById("registration-form");
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault(); // prevents the form from performing that default action, in this case is preventing the form from submitting direct.
 
-  const formData = {
-    fullName: document.getElementById("fullName").value,
-    email: document.getElementById("email").value,
-    password1: document.getElementById("password-1").value,
-    password2: document.getElementById("password-2").value,
-  };
-  console.log("form submitted:", formData);
-  alert("Registration successful!");
-  form.reset();
-  // if (password1 = password2) {
-  // } else {
-  //     alert("Passwords does not match")
+//   const formData = {
+//     fullName: document.getElementById("fullName").value,
+//     email: document.getElementById("email").value,
+//     password1: document.getElementById("password-1").value,
+//     password2: document.getElementById("password-2").value,
+//   };
+//   console.log("form submitted:", formData);
+//   alert("Registration successful!");
+//   form.reset();
+//   // if (password1 = password2) {
+//   // } else {
+//   //     alert("Passwords does not match")
+//   // }
+// });
+
+
+// const btn1 = document.querySelector(".btn-1");
+// btn1.addEventListener("click", func1);
+
+// function func1() {
+//   btn1.classList.toggle("red")
+// };
+
+// const alertBtn = document.getElementById("alert-btn");
+
+// alertBtn.addEventListener("click", function handleClick() {
+//   console.log('You clicked me🤨')
+// });
+
+// alertBtn.addEventListener("mouseup", () => {
+//   alertBtn.style.backgroundColor = "magenta"
+// })
+// alertBtn.addEventListener("mousedown", () => {
+//   alertBtn.style.backgroundColor = "darkgreen"
+// });
+
+
+  // const btn2 = document.getElementById("btn2");
+
+  // function myFunc(event) {
+  //   console.log("Triggered by:", event.type);
   // }
+
+  // // Attach multiple events to the same function
+  // btn2.addEventListener("click", myFunc);
+  // btn2.addEventListener("mouseover", myFunc);
+
+
+
+  // Creating and Element and adding it to the DOM
+  // const ell1 = document.createElement("h1");
+  // const userName = prompt("Enter your name");
+  // ell1.innerText = "Hello " + userName;
+  // document.body.appendChild(ell1)
+  // console.log(ell1);
+
+  const ell2 = document.createElement("p");
+  ell2.textContent = "Hi World";
+  ell2.innerText = "Hi People";
+  document.body.appendChild(ell2);
+  document.body.append(ell2);
+  console.log(ell2);
+
+
+// // Checking the differences btw innerText and textContent
+// let div = document.getElementById("demo");
+// console.log(div.textContent);
+// console.log(div.innerText);
+
+// textContent ignores css styles while innerText doesn't. Only use innerText for what the user is to see.
+
+// When to Use
+
+// Use textContent when:
+// You want all text, including hidden.
+// You need exact DOM source representation.
+// Performance matters (large lists, frequent updates).
+
+// Use innerText when:
+// You want only what the user can see.
+// You’re copying/extracting text for display, search, or accessibility.
+
+// Best Practice
+// 👉 Default to textContent (safer, faster, predictable).
+// 👉 Use innerText only if you explicitly want “what the user sees”.
+
+const ell3 = document.createElement("button");
+document.body.appendChild(ell3);
+ell3.textContent = "random";
+ell3.className = "button";
+function ell3Text() {
+  ell3.textContent = Math.floor(Math.random() * (1000 + 1))
+}
+
+
+ell3.addEventListener("mousedown", () => ell3.style.backgroundColor = "red");
+ell3.addEventListener("mouseup", () => ell3.style.backgroundColor = "green");
+ell3.addEventListener("mouseover", () => {
+  ell3.style.backgroundColor = "purple";
+  ell3Text()
 });
+ell3.addEventListener("mouseout", () => {
+  ell3.style.backgroundColor = "magenta";
+  ell3Text();
+});
+
+
+const div1 = document.getElementById("div-parent");
+const ell4 = document.createElement("button");
+ell4.className = "button"
+div1.appendChild(ell4);
+ell4.textContent = "Create";
