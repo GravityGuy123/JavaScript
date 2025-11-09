@@ -1,0 +1,45 @@
+/* Custom Styles for Web and Graphics Design Portfolio */
+
+body {
+  background-color: #1a1a2e; /* Dark blue/purple background */
+  color: #e0e0e0; /* Light text color for contrast */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-brand,
+.nav-link {
+  color: #f0f0f0 !important;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: #00f5d4 !important; /* Vibrant teal accent for active/hover links */
+}
+
+.hero-section {
+  background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(26, 26, 46, 0.9)), url('../images/hero-background.jpg'); /* Optional: Add a subtle background image */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accent-bg-color {
+  background-color: #00f5d4; /* Vibrant teal */
+  border-color: #00f5d4;
+  color: #1a1a2e !important; /* Dark text on accent button */
+}
+
+.accent-bg-color:hover {
+  background-color: #00d1b2; /* Slightly darker teal on hover */
+  border-color: #00d1b2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #f8f9fa; /* Lighter headings */
+}
+
+/* Add more custom styles as needed for cards, sections, etc. */

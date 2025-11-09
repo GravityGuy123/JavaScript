@@ -720,27 +720,6 @@ let result = (function () {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Increment Operators are operators used for incrementing or increasing the value of a variable. It is of two types.
 // 1. Pre-increment Operator (Increases the value before calling it) i.e ++a
 // 2. Post-increment Operator (Increases the value after calling it) i.e a++
