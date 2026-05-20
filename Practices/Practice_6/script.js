@@ -296,20 +296,24 @@ let numberArray = [];
 // for (let a = 0; a <= 10; a += 1) {
 //   numberArray.push(a);
 // }
+
 // // console.log(numberArray)
 // numberArray.forEach((n) => console.log(n))
 
 // for (let a = 1; a <= 10; a++) {
 //   // function addNum(a = 3, b = 1, c = 6, d = 2, e = 0, f = 3, g = 4, h = 7, i = 5, j = 1)
 //   numberArray.push(a);
+
 //   // function addNum(a = 3, b = 1) {
 //   //   return a + b;
 //   // }
 //   console.log("Result:" ,addNum(a))
 // }
+
 // function addNum(numberArray) {
 //   return numberArray[0] + numberArray[1]
 // }
+
 // console.log(addNum(numberArray))
 // console.log(numberArray)
 // let totalCalc =

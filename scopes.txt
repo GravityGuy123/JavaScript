@@ -1,0 +1,348 @@
+In JavaScript, scope determines where a variable can be accessed from.
+
+Think of scope as the “visibility area” of a variable.
+
+There are 4 major scope concepts you should know:
+
+1. Global Scope
+2. Function Scope
+3. Block Scope
+4. Local Scope
+
+1. Global Scope
+
+A variable declared outside every function or block becomes a global variable.
+
+It can be accessed from almost anywhere in your code.
+
+let company = "Gravity Concepts";
+
+function showCompany() {
+  console.log(company);
+}
+
+showCompany();
+
+console.log(company);
+Output
+Gravity Concepts
+Gravity Concepts
+
+Because company is global, both the function and the outside code can access it.
+
+Global Variables
+
+Variables in global scope are called global variables.
+
+let name = "Ifeanyi";
+
+This variable is accessible everywhere unless shadowed.
+
+Problem with Global Variables
+
+Too many globals can cause:
+
+naming conflicts
+accidental overwrites
+harder debugging
+messy code
+
+Example:
+
+let score = 50;
+
+function updateScore() {
+  score = 100;
+}
+
+updateScore();
+
+console.log(score);
+
+Output:
+100
+
+The function changed the global variable directly.
+
+2. Function Scope
+
+Variables declared inside a function are only accessible inside that function.
+
+function greet() {
+  let message = "Hello";
+  console.log(message);
+}
+
+greet();
+
+console.log(message);
+
+Output:
+
+Hello
+ReferenceError: message is not defined
+
+Why?
+
+Because message only exists inside greet().
+
+Function Scope = Local Scope
+
+Anything declared inside a function is considered local to that function.
+
+function test() {
+  let age = 25;
+}
+
+age is a local variable.
+
+3. Block Scope
+
+A block is anything inside curly braces {}.
+
+Examples:
+
+if () {}
+for () {}
+while () {}
+{
+}
+
+Variables declared with:
+
+let
+const
+
+are block scoped.
+
+Meaning they only exist inside that block.
+
+Example
+if (true) {
+  let username = "Gravity";
+  console.log(username);
+}
+
+console.log(username);
+
+Output:
+
+Gravity
+ReferenceError
+
+Because username only exists inside the if block.
+
+4. var vs let vs const
+
+This is VERY important.
+
+Keyword	Scope Type
+var	Function scoped
+let	Block scoped
+const	Block scoped
+Example Comparison
+Using var
+if (true) {
+  var color = "blue";
+}
+
+console.log(color);
+
+Output:
+
+blue
+
+Why?
+
+Because var ignores block scope.
+
+Using let
+if (true) {
+  let color = "blue";
+}
+
+console.log(color);
+
+Output:
+
+ReferenceError
+
+Because let respects block scope.
+
+Function Scope vs Block Scope
+function example() {
+  if (true) {
+    var a = 10;
+    let b = 20;
+  }
+
+  console.log(a);
+  console.log(b);
+}
+
+example();
+
+Output:
+
+10
+ReferenceError
+
+Why?
+
+a survives because var is function scoped
+b dies after the block because let is block scoped
+Scope Chain
+
+Inner scopes can access outer scopes.
+
+let company = "Gravity";
+
+function outer() {
+  let founder = "Ifeanyi";
+
+  function inner() {
+    console.log(company);
+    console.log(founder);
+  }
+
+  inner();
+}
+
+outer();
+
+Output:
+
+Gravity
+Ifeanyi
+
+The inner function can access:
+
+its own variables
+parent variables
+global variables
+
+This is called the scope chain.
+
+Shadowing
+
+A local variable can temporarily override an outer variable.
+
+let name = "Global";
+
+function test() {
+  let name = "Local";
+  console.log(name);
+}
+
+test();
+
+console.log(name);
+
+Output:
+
+Local
+Global
+
+Inside the function, the local variable shadows the global one.
+
+Lexical Scope
+
+JavaScript determines scope based on where code is written, not where it runs.
+
+function outer() {
+  let message = "Hello";
+
+  function inner() {
+    console.log(message);
+  }
+
+  inner();
+}
+
+outer();
+
+inner() can access message because it was written inside outer().
+
+This is called lexical scoping.
+
+Closures (Built on Scope)
+
+A closure happens when a function remembers variables from its outer scope even after the outer function finishes.
+
+function counter() {
+  let count = 0;
+
+  return function () {
+    count++;
+    console.log(count);
+  };
+}
+
+const increment = counter();
+
+increment();
+increment();
+increment();
+
+Output:
+
+1
+2
+3
+
+The inner function “remembers” count.
+
+That’s a closure.
+
+Quick Real-World Analogy
+
+Think of scopes like rooms in a building.
+
+Global scope → entire building
+Function scope → one room
+Block scope → a smaller section inside the room
+
+People inside a room can see outside the room.
+
+But people outside cannot see inside the room.
+
+Best Practice
+
+Use:
+
+const
+
+by default.
+
+Use:
+
+let
+
+when value will change.
+
+Avoid:
+
+var
+
+in modern JavaScript.
+
+Modern Rule of Thumb
+Use Case	Recommended
+Value never changes	const
+Value changes	let
+Legacy old code	var
+Simple Mental Model
+Global Scope
+ └── Function Scope
+      └── Block Scope
+
+Inner scopes can access outer scopes.
+
+Outer scopes cannot access inner scopes.
+
+Most Important Thing to Remember
+var  => function scoped
+let  => block scoped
+const => block scoped
+
+That single difference explains MOST JavaScript scope behavior.

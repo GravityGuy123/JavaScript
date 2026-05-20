@@ -188,8 +188,10 @@
 
 // // 5. Create a loop that will iterate up to totalCells + 1
 // for (let i = 0; i <= totalCells; i++) {
+
 //   // 6. If counter is divisible by 8 (or number of columns)
 //   if (counter % 8 === 0) {
+
 //     // 7. Check if row is defined and already has data
 //     if (row.length > 0) {
 //       grid.push(row); // add the current completed row to the grid
